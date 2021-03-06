@@ -69,7 +69,7 @@ public void testTodaysDealsGetClick(){
 }
 
 
-    // teat Amazon Assistant functionality
+    // test Amazon Assistant functionality
     @Test()
     public  void testAmazonAssistant(){
         driver.findElement(By.xpath("//*[@id=\"navFooter\"]/div[1]/div/div[7]/ul/li[8]/a")).click();
@@ -95,7 +95,7 @@ public void testTodaysDealsGetClick(){
         String actualTest= driver.findElement(By.xpath("/html/body/div[2]/div[1]/h1")).getText();
         Assert.assertEquals(actualTest, expectedText, "testing");
     }
-    //*[@id="nav-xshop"]/a[6]
+
 
 
     // test books functionality
@@ -128,19 +128,6 @@ public void testTodaysDealsGetClick(){
         String actualTitle= driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle, "testing");
     }
-
-
-    // test amazon Home
-    @Test()
-    public void testAmazonHome(){
-        driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[12]")).click();
-
-        String expectedTitle="Shop Amazon Home Products";
-        String actualTitle= driver.getTitle();
-        Assert.assertEquals(actualTitle, expectedTitle, "testing");
-    }
-
-
 
     // test  check amazon cart
     @Test()
@@ -189,6 +176,7 @@ public void testTodaysDealsGetClick(){
     // test change language in amazon header
     @Test()
     public void testChangeLanguageHeader(){
+        // hello
         driver.findElement(By.xpath("//*[@id=\"icp-nav-flyout\"]/span/span[2]/span[1]")).click();
         driver.findElement(By.xpath("//*[@id=\"customer-preferences\"]/div/div/form/div[1]/div[1]/div[2]/div/label/span")).click();
         driver.findElement(By.className("a-button-input")).click();
